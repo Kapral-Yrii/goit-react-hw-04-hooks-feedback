@@ -9,11 +9,14 @@ class App extends Component {
   state = {
     good: 0,
     neutral: 0,
-    bad: 0
+    bad: 0,
   }
   options = ["Good", "Neutral", "Bad"]
-  onLeaveFeedback(e) {
-    console.log(e.target.textContent.toLowerCase());
+  onLeaveFeedback = (e) =>{
+    const value = e.target.textContent.toLowerCase();
+    this.setState((state) => {
+      return { [value]: state[value] + 1}
+    })
   }
   countTotalFeedback() {
     return this.state.good + this.state.neutral + this.state.bad

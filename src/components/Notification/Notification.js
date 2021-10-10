@@ -5,3 +5,7 @@ export function Notification({ message }) {
         <p>{message}</p>
     )
 }
+
+Notification.propTypes = {
+    message: PropTypes.string
+}
