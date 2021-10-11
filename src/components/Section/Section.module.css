@@ -1,4 +1,9 @@
 .container {
   width: 300px;
   margin: 0 auto;
+  padding: 30px;
+  background-color: rgb(209, 209, 209);
+}
+.title {
+  text-align: center;
 }
