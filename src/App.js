@@ -1,4 +1,4 @@
-import './App.css';
+import s from'./App.module.css';
 import { Component } from 'react'
 import { Section } from './components/Section/Section'
 import { FeedbackOptions } from './components/FeedbackOptions/FeedbackOptions'
@@ -35,7 +35,7 @@ class App extends Component {
   
   render() {
     return (
-      <div className={"app"}>
+      <div className={s.app}>
         <Section title="Please leave feedback">
           <FeedbackOptions options={this.options} onLeaveFeedback={this.onLeaveFeedback} />
         </Section>
