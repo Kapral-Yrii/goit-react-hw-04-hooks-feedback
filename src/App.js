@@ -30,16 +30,16 @@ function App() {
     }, [])
 
     const countTotalFeedback = () => {
-    return good + neutral + bad
-  }
+        return good + neutral + bad
+    }
 
     const countPositiveFeedbackPercentage = () => {
-    const total = countTotalFeedback()
-    if (total === 0) {
-      return 0
+        const total = countTotalFeedback()
+        if (total === 0) {
+          return 0
+        }
+        return Math.round((good * 100) / total) 
     }
-    return Math.round((good * 100) / total) 
-  }
 
   
 
